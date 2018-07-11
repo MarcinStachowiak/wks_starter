@@ -10,7 +10,7 @@ testAlgotithm4_1 <- function(){
   
   # __________START_OF_MODIFIABLE_AREA____________
   # Example: Replace the following line by calling your algorithm
-  labels = data.frame(replicate(1,sample(1:3,dim(input)[1],rep=TRUE)))
+  labels = data.frame(replicate(1,sample(0:2,dim(input)[1],rep=TRUE)))
   # ___________END_OF_MODIFIABLE_AREA_____________
   
   
