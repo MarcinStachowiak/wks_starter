@@ -133,7 +133,7 @@ testAlgotithm3_2 <- function(debug=FALSE){
 testAlgotithm4_1 <- function(debug=FALSE){
   # ________START_OF_UNMODIFIABLE_AREA____________
   # Read the test data
-  input <- read.csv("test_4_1.csv",header=TRUE,sep = ',')
+  input <- read.csv("test_4_1.csv",header=TRUE,sep = ',',stringsAsFactors = FALSE)
   stopifnot(is.data.frame(input))
   stopifnot(dim(input)[2]==4)
   # remove output column
@@ -166,7 +166,7 @@ testAlgotithm4_1 <- function(debug=FALSE){
 testAlgotithm4_2 <- function(debug=FALSE){
   # ________START_OF_UNMODIFIABLE_AREA____________
   # Read the test data
-  input <- read.csv("test_4_2.csv",header=TRUE,sep = ',')
+  input <- read.csv("test_4_2.csv",header=TRUE,sep = ',',stringsAsFactors = FALSE)
   stopifnot(is.data.frame(input))
   stopifnot(dim(input)[2]==4)
   # remove output column
