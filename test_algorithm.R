@@ -127,3 +127,69 @@ testAlgotithm3_2 <- function(debug=FALSE){
   write.table(labels, file = "test_predicted_3_2.csv",row.names=FALSE,col.names=FALSE)
   # _________END_OF_UNMODIFIABLE_AREA_____________
 }
+
+
+# This script checks the effectiveness of the algorithm
+testAlgotithm4_1 <- function(debug=FALSE){
+  # ________START_OF_UNMODIFIABLE_AREA____________
+  # Read the test data
+  input <- read.csv("test_4_1.csv",header=TRUE,sep = ',')
+  stopifnot(is.data.frame(input))
+  stopifnot(dim(input)[2]==4)
+  # remove output column
+  drop <- c("oferta","windykacja")
+  data_x <- input[,!(names(input) %in% drop)]
+  if(debug){
+    printStatistics(data_x)
+  }
+  # _________END_OF_UNMODIFIABLE_AREA_____________
+  
+  
+  # __________START_OF_MODIFIABLE_AREA____________
+  # Example: Replace the following line by calling your algorithm
+  # Use "data_x" as your algorithm input
+  labels <- data.frame(replicate(1,sample(0:1,dim(data_x)[1],rep=TRUE)))
+  # ___________END_OF_MODIFIABLE_AREA_____________
+  
+  
+  # ________START_OF_UNMODIFIABLE_AREA____________
+  # Save the output vecotr
+  stopifnot(is.data.frame(labels))
+  stopifnot(dim(labels)[1]==dim(input)[1])
+  stopifnot(dim(labels)[2]==1)
+  write.table(labels, file = "test_predicted_4_1.csv",row.names=FALSE,col.names=FALSE)
+  # _________END_OF_UNMODIFIABLE_AREA_____________
+}
+
+
+# This script checks the effectiveness of the algorithm
+testAlgotithm4_2 <- function(debug=FALSE){
+  # ________START_OF_UNMODIFIABLE_AREA____________
+  # Read the test data
+  input <- read.csv("test_4_2.csv",header=TRUE,sep = ',')
+  stopifnot(is.data.frame(input))
+  stopifnot(dim(input)[2]==4)
+  # remove output column
+  drop <- c("oferta","windykacja")
+  data_x <- input[,!(names(input) %in% drop)]
+  if(debug){
+    printStatistics(data_x)
+  }
+  # _________END_OF_UNMODIFIABLE_AREA_____________
+  
+  
+  # __________START_OF_MODIFIABLE_AREA____________
+  # Example: Replace the following line by calling your algorithm
+  # Use "data_x" as your algorithm input
+  labels <- data.frame(replicate(1,sample(0:1,dim(data_x)[1],rep=TRUE)))
+  # ___________END_OF_MODIFIABLE_AREA_____________
+  
+  
+  # ________START_OF_UNMODIFIABLE_AREA____________
+  # Save the output vecotr
+  stopifnot(is.data.frame(labels))
+  stopifnot(dim(labels)[1]==dim(input)[1])
+  stopifnot(dim(labels)[2]==1)
+  write.table(labels, file = "test_predicted_4_2.csv",row.names=FALSE,col.names=FALSE)
+  # _________END_OF_UNMODIFIABLE_AREA_____________
+}
