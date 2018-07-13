@@ -193,3 +193,23 @@ testAlgotithm4_2 <- function(debug=FALSE){
   write.table(labels, file = "test_predicted_4_2.csv",row.names=FALSE,col.names=FALSE)
   # _________END_OF_UNMODIFIABLE_AREA_____________
 }
+
+
+args = commandArgs(trailingOnly=TRUE)
+if (length(args)==0) {
+  print("At least one argument must be supplied (input file)", call.=FALSE)
+} else if(args[1]=='1') {
+  testAlgotithm1()
+}else if(args[1]=='2') {
+  testAlgotithm2()
+}else if(args[1]=='3_1') {
+  testAlgotithm3_1()
+}else if(args[1]=='3_2') {
+  testAlgotithm3_2()
+}else if(args[1]=='4_1') {
+  testAlgotithm4_1()
+}else if(args[1]=='4_2') {
+  testAlgotithm4_2()
+}else{
+  print("Wrong argument", call.=FALSE)
+}
