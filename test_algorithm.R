@@ -191,7 +191,7 @@ testAlgotithm4_2 <- function(debug=FALSE){
   stopifnot(dim(labels)[1]==dim(input)[1])
   stopifnot(dim(labels)[2]==1)
   write.table(labels, file = "test_predicted_4_2.csv",row.names=FALSE,col.names=FALSE)
-  # _________END_OF_UNMODIFIABLE_AREA_____________
+  # _________END_OF_UNMODIFIABLE_AREA_____________.
 }
 
 
