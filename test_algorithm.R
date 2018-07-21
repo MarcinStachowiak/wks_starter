@@ -2,7 +2,7 @@ printStatistics <- function(data_x){
   str(data_x)
 }
 
-# This script checks the effectiveness of the algorithm
+# This script checks the effectiveness of the algorithm.
 testAlgotithm1 <- function(debug=FALSE){
   # ________START_OF_UNMODIFIABLE_AREA____________
   # Read the test data
